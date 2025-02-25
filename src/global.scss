@@ -1,0 +1,79 @@
+@use './styles/var' as *;
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;   
+}
+
+body {
+    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $secondary-color;
+}
+
+.title {
+    font-family: poppins;
+    font-size: 30px;
+    font-weight: $font-semibold;
+    color: $tertiary-color;
+    margin-top: 10px;
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    background-color: $secondary-color;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+input {
+    height: 45px;
+    font-size: 18px;
+    font-family: raleway;
+    background-color: $secondary-color; 
+    color: $tertiary-color;
+}
+
+.addingItem {
+    height: 45px;
+    width: 60px;
+    margin-left: 5px;
+    background-color: $secondary-color ;
+    color: $tertiary-color;
+    border: none;
+    font-size: 38px;
+    font-style: italic;
+}
+
+.list {
+    width: 100%;
+    list-style: none;
+    margin-top: 10px;
+    color: $tertiary-color;
+    font-family: raleway;
+    font-size: 25px;
+    font-style: italic;
+}
+
+.item {
+    border: 10 px solid white;
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.deleteItem {
+    height: 25px;
+    width: 30px;
+    cursor: pointer;
+}
