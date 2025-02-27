@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./index.scss";
-import header from '../../components/header/header'
+import DeleteBox from "../../components/deleteBox/deleteBox";
 import Header from "../../components/header/header";
-
+import AddingBox from "../../components/addingBox/addingBox";
 
 
 function Home() {
@@ -58,7 +58,7 @@ function Home() {
 
   return (
     <>
-    <Header />
+      <Header />
       <h1 className="title">
         Otimize seu tempo e se organize com o nosso Planejador Diário.
       </h1>
@@ -88,7 +88,7 @@ function Home() {
                 checked={item.completado}
                 onChange={() => marcarCompleto(item.id)}
               />
-              <button className="editItem" onClick={() => handelEditItem(item.id, item.texto)}><img src="/editIcon2.svg" className="icons" alt="Delete" /></button>
+              <button className="editItem" onClick={() => handelEditItem(item.id, item.texto)}><img src="/editar1.png" className="icons" alt="Delete" /></button>
               <button className="deleteItem" onClick={() => handleDeleteItem(item)}>
                 <img src="/deleteIcon.svg" className="icons" alt="Delete" />
               </button>
