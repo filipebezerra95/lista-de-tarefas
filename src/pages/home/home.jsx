@@ -1,10 +1,11 @@
-/*import React, { useState } from "react";
-import "./global.scss";
-import Header from "./components/header/header";
+import React, { useState } from "react";
+import "./index.scss";
+import header from '../../components/header/header'
+import Header from "../../components/header/header";
 
 
 
-function App() {
+function Home() {
   const [itemList, setItemList] = useState([]);
   const [inputText, setInputText] = useState("");
   const [editId, setEditId] = useState(null);
@@ -96,8 +97,9 @@ function App() {
             </li>
           ))}
         </ul>
-        <div className="newTask">
+        <div>
           <input
+            className="newTask"
             type="text"
             value={inputText}
             placeholder="nova tarefa..."
@@ -112,4 +114,4 @@ function App() {
   );
 }
 
-export default App;*/
+export default Home;
