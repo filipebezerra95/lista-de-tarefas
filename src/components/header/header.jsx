@@ -1,11 +1,14 @@
 import React from "react";
 import './index.scss'
 
+
+
 const Header = () => {
     return (
-        <>
-            <div>teste</div>
-        </>
+        <div className="navBar">
+            <div className="org">organisação</div>
+            <div className="tarefas">tarefas</div>
+        </div>
     )
 }
 

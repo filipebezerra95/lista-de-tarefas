@@ -1,0 +1,120 @@
+@use '../../styles/var' as *;
+
+body {
+    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $secondary-color;
+}
+
+.title {
+    font-family: poppins;
+    font-size: 30px;
+    font-weight: $font-semibold;
+    color: $tertiary-color;
+    margin-top: 100px;
+    margin-left: 64px;
+    height: 60px;
+    
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    background-color: $secondary-color;
+    padding: 30px;
+    border-radius: 8px;
+    margin-left: 64px;
+}
+
+.title-table {
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    font-family: poppins;
+    font-size: 30px;
+    font-weight: $font-semibold;
+    color: $tertiary-color;
+    margin-top: 10px;
+    margin-bottom: 0px;
+
+    .task {
+        padding-right: 100px;
+        
+    }
+    .actions {
+        padding-right: 60px;
+        padding-left: 30px;
+        align-items:self-end
+    }
+}
+
+input {
+    height: 45px;
+    font-size: 18px;
+    font-family: raleway;
+    background-color: $secondary-color; 
+    color: $tertiary-color;
+}
+
+.addingItem {
+    height: 45px;
+    width: 60px;
+    margin-left: 5px;
+    background-color: $secondary-color ;
+    color: $tertiary-color;
+    border: none;
+    font-size: 38px;
+    font-style: italic;
+}
+
+.list {
+    width: 100%;
+    list-style: none;
+    margin-top: 10px;
+    padding-left: 0px;
+    color: $tertiary-color;
+    font-family: raleway;
+    font-size: 25px;
+    font-style: italic;
+}
+
+.item {
+    width: 685px;
+    border: 10 px solid white;
+    padding: 10px;
+    margin-left: 0px;
+    display:flex;
+    justify-content: space-between;
+    width: 600px;
+     .icons {
+        margin-left: 0px;
+     }
+    
+}
+ 
+
+.deleteItem {
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+}
+
+.editItem {
+    height: 32px;
+    padding: 0px;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.newTask {
+    align-items: start;
+    margin-top: 10px;
+}
+ .newTask {
+    font-style: italic;
+ }
