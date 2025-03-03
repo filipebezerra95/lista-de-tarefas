@@ -1,115 +1,31 @@
-/*import React, { useState } from "react";
-import "./global.scss";
-import Header from "./components/header/header";
+import React from "react";
+import Header from "./Header/Header"
+import TodoList from "./TodoList/TodoList"
+// import { Router } from "./routing";
 
+//utilizar esse mockup como exemplo
 
+const db = [
+  { "id": 1, "title": "Exercicios", "description": "Ir para academia fazer exercicios", "completed": true },
+  { "id": 2, "title": "Limpar o carro", "description": "Limpar o carro inteiro, de dentro pra fora", "completed": false },
+  { "id": 3, "title": "Banho e tosa", "description": "Levar o cachorro ao pet shop", "completed": false },
+  { "id": 4, "title": "Limpar quarto", "description": "Limpar toda bagunça que está dentro do quarto", "completed": true },
+  { "id": 5, "title": "trabalhar", "description": "Chegar ao escritorio antes das 20:00", "completed": true },
+  { "id": 6, "title": "Ir ao banco", "description": "Chear ao banco antes das 10:00", "completed": false },
+  { "id": 7, "title": "Almoçar", "description": "Preparar a comida para a janta", "completed": false },
+  { "id": 8, "title": "Jogar volei", "description": "Ir a quadra para jogar volei com os amigos", "completed": true },
+  { "id": 9, "title": "Estudar programação", "description": "Entrar na plataforma dos alunos para estudar", "completed": false },
+  { "id": 10, "title": "shopping", "description": "Fazer algumas compras no shopping", "completed": true }
+]
 
 function App() {
-  const [itemList, setItemList] = useState([]);
-  const [inputText, setInputText] = useState("");
-  const [editId, setEditId] = useState(null);
-  const [editText, setEditText] = useState("");
-
-  function handleAddingItem() {
-    const noSpacingText = inputText.trim();
-    if (noSpacingText === "") return;
-
-    let newItem = {
-      id: Date.now(),
-      texto: noSpacingText,
-      completado: false,
-    };
-
-    setItemList([...itemList, newItem]);
-    setInputText("");
-  }
-
-  const marcarCompleto = (id) => {
-    const updateTodos = itemList.map((item) => {
-      if (item.id === id) {
-        return { ...item, completado: !item.completado };
-      }
-      return item;
-    });
-    setItemList(updateTodos);
-  };
-
-  function handleDeleteItem(item) {
-    setItemList((prevList) => prevList.filter((list) => list !== item));
-  }
-
-  function handelEditItem(id, texto) {
-    setEditId(id);
-    setEditText(texto);
-  }
-
-  function handleSaveEdit(id) {
-    const updateItems = itemList.map((item) => {
-      if (item.id ===id) {
-        return {...item, texto: editText };
-      }
-      return item;
-    });
-    setItemList(updateItems);
-    setEditId(null);
-    setEditText("");
-  }
-
   return (
-    <>
-    <Header />
-      <h1 className="title">
-        Otimize seu tempo e se organize com o nosso Planejador Diário.
-      </h1>
-      <div className="container">
-      
-        <ul className="list">
-        <div className="title-table">
-          <span className="task">Tarefa</span>
-          <span className="actions">Status</span>
-          <span className="actions">opções</span>
-        </div>
-        <img src="./line.svg"/>
-          {itemList.map((item) => (
-            <li className="item" key={item.id}>
-              {editId === item.id ? (
-                <>
-                 <input type="text" value={editText} onChange={(e) => setEditText(e.target.value)}/>
-                 <button onClick={()=> handleSaveEdit(item.id)}>salvar</button>
-                </>
-              ) : (
-              <>
-              <span style={{ textDecoration: item.completado ? "line-through" : "none" }}>
-                {item.texto}
-              </span>
-              <input
-                type="checkbox"
-                checked={item.completado}
-                onChange={() => marcarCompleto(item.id)}
-              />
-              <button className="editItem" onClick={() => handelEditItem(item.id, item.texto)}><img src="/editIcon2.svg" className="icons" alt="Delete" /></button>
-              <button className="deleteItem" onClick={() => handleDeleteItem(item)}>
-                <img src="/deleteIcon.svg" className="icons" alt="Delete" />
-              </button>
-              </>
-              )}
-            </li>
-          ))}
-        </ul>
-        <div className="newTask">
-          <input
-            type="text"
-            value={inputText}
-            placeholder="nova tarefa..."
-            onChange={(e) => setInputText(e.target.value)}
-          />
-          <button className="addingItem" onClick={handleAddingItem}>
-            +
-          </button>
-        </div>
-      </div>
-    </>
+    <div className="App" >
+      {/* <Router /> */}
+      <Header/>
+      <TodoList/>
+    </div>
   );
 }
 
-export default App;*/
+export default App;
