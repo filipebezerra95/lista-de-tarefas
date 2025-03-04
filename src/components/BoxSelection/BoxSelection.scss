@@ -68,6 +68,7 @@
   }
 
   .input-container {
+     
      display: flex;
      flex-direction: row;
      align-items: center;
@@ -96,4 +97,12 @@
     padding-top: 40px;
     padding-bottom: 40px;
   }
+
+  .todo-description {
+   font-weight: $font-regular;
+   font-size: 1.5rem;
+   color: $color-input;
+   text-align: center;
+   
+ }
 }

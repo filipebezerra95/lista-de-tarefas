@@ -14,7 +14,7 @@ JSON Server
 Como rodar no seu computador🖥️
 Instale o Node.js e o Git. Então:
 # clone esse repositório
-$ git clone https://github.com/patriciasanttos/<repo_name>.git
+$ git clone https://github.com/filipebezerra95/<repo_name>.git
 
 # acesse a pasta do projeto
 $ cd <repo_name>
