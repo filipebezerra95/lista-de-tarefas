@@ -3,7 +3,7 @@ Descrição 📄
 Aplicação desenvolvida para listar e visualizar tarefas, com o objetivo de colocar em práticas a biblioteca de desenvolvimento de interfaces React JS.
 
 Visualizar o resultado
-https://desafio3-todo-list.netlify.app/
+https://desafio3-lista-de-tarefas-filipebza.netlify.app/
 Tecnologias 🚀
 Javascript
 React JS
@@ -14,10 +14,10 @@ JSON Server
 Como rodar no seu computador🖥️
 Instale o Node.js e o Git. Então:
 # clone esse repositório
-$ git clone https://github.com/filipebezerra95/<repo_name>.git
+$ git clone https://github.com/filipebezerra95/lista-de-tarefas.git
 
 # acesse a pasta do projeto
-$ cd <repo_name>
+$ cd lista-de-tarefas
 
 # instale as dependências
 $ npm install
